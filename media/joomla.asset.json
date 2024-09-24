@@ -1,0 +1,57 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "mod_imdb",
+  "version": "1.0.0",
+  "description": "Joomla Module Tutorial",
+  "license": "GPL-2.0-or-later",
+  "assets": [
+    {
+      "name": "mod_imdb.jquery",
+      "type": "script",
+      "uri": "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js",
+      "attributes": {
+        "defer": true
+      },
+      "version": "3.7.1"
+    },
+    {
+      "name": "mod_imdb.foundation",
+      "type": "script",
+      "uri": "https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js",
+      "dependencies": [
+        "mod_imdb.jquery"
+      ],
+      "attributes": {
+        "defer": true
+      },
+      "version": "6.8.1"
+    },
+    {
+      "name": "mod_imdb.films",
+      "type": "script",
+      "uri": "mod_imdb/films.js",
+      "dependencies": [
+        "mod_imdb.foundation"
+      ],
+      "attributes": {
+        "type": "module"
+      },
+      "version": "1.1.0"
+    },
+    {
+      "name": "mod_imdb.foundation-css",
+      "type": "style",
+      "uri": "https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css",
+      "version": "6.8.1"
+    },
+    {
+      "name": "mod_imdb.module-style",
+      "type": "style",
+      "uri": "mod_imdb/style.css",
+      "dependencies": [
+        "mod_imdb.foundation-css"
+      ],
+      "version": "1.0.0"
+    }
+  ]
+}

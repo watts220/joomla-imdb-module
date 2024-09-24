@@ -1,0 +1,336 @@
+[type=color], [type=date], [type=datetime-local], [type=datetime], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], textarea{
+    margin: 0px;
+    height: auto;
+}
+.mod-filmsearch {
+    margin-top: 20px;
+}
+
+#filmsearch-form {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+#filmsearch-form .cell {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.search-cell{
+    display: flex;
+    align-items: flex-end;
+}
+#filmsearch-form label {
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#filmsearch-form input {
+    background: #FAFAFA;
+    border-radius: 5px;
+    border: 1px solid #BFBFBF;
+    box-shadow: none;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 13px 15px;
+    height: 50px;
+}
+
+#search-button {
+    border-radius: 5px;
+    border: 1px solid #339B4A;
+    background: #84E699;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 20px;
+    margin: 0px;
+    margin-top: 10px;
+    height: 50px;
+    transition: all .3s ease;
+}
+#search-button:hover{
+    background: #84e69945;
+}
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-top: 20px;
+    margin-left: -3.5px;
+    margin-right: -3.5px;
+}
+
+#search-results .cell {
+    padding-left: 3.5px;
+    padding-right: 3.5px;
+}
+
+#search-results .card {
+    border: 0px;
+    box-shadow: none !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+#search-results .card:hover{
+    cursor: pointer;
+}
+#search-results .card:hover img{
+    scale: 1.2;
+}
+#search-results .card:hover .film-title{
+    color: #1779ba;
+}
+#search-results .card-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+#search-results .callout.warning{
+    background: #FCFBE8;
+    border: none;
+    color: #625E1E;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 45px 90px;
+}
+.mod-filmsearch .poster-outer{
+    border-radius: 5px;
+    overflow: clip;
+}
+.mod-filmsearch .card img {
+    border-radius: 5px;
+    object-fit: cover;
+    aspect-ratio: 14 / 17;
+    width: 100%;
+    transition: all .3s ease;
+}
+
+.mod-filmsearch .callout {
+    text-align: center;
+}
+
+.mod-filmsearch .button {
+    margin-top: 0px;
+}
+
+.film-title {
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .3s ease;
+}
+
+.film-year {
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.loader-outer {
+    position: absolute;
+    background: #0000008c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+}
+
+.film-loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    border: 4px solid #0000;
+    border-radius: 50%;
+    border-right-color: #84E699;
+    animation: l15 1s infinite linear;
+}
+
+.film-loader::before,
+.film-loader::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2px;
+    border: inherit;
+    border-radius: 50%;
+    animation: l15 2s infinite;
+}
+
+.film-loader::after {
+    margin: 8px;
+    animation-duration: 3s;
+}
+
+@keyframes l15 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
+#film-details-modal {
+    border-radius: 5px;
+    padding: 25px;
+}
+
+#film-details-modal .close-button {
+    top: -12px;
+    right: -5px;
+}
+
+#film-details-modal .film-title {
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    max-width: 90%;
+}
+
+#film-details-modal .film-release-date {
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+#film-details-modal .film-genres {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#film-details-modal .genre {
+    border-radius: 5px;
+    background: #000C7B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 6px 15px;
+    margin-right: 10px;
+}
+
+#film-details-modal .film-poster {
+    aspect-ratio: 14 / 17;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#film-details-modal .film-description {
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+#film-details-modal .film-runtime {
+    color: #808080;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.imdb-link {
+    border-radius: 5px;
+    border: 1px solid #339B4A;
+    background: #84E699;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0px;
+    padding: 16px 20px;
+    height: 50px;
+    width: 195px;
+    transition: all .3s ease;
+}
+.imdb-link:hover{
+    color: #000;
+    background: #84e69945;
+}
+
+.mod-filmsearch {
+    display: block;
+    max-width: 100%;
+    padding: 10px;
+}
+/* Enable container query */
+.mod-filmsearch {
+    container-type: inline-size;
+    display: block;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.mod-filmsearch .grid-x {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mod-filmsearch .cell {
+    flex: 1 1 auto;
+}
+
+/* Container-based responsive design */
+@container (min-width: 250px) and (max-width: 600px){
+    #search-results .cell {
+        flex: 1 1 50%;
+    }
+    #filmsearch-form .cell {
+        flex: 1 1 50%;
+    }
+}
+
+@container (min-width: 600px) and (max-width: 1200px){
+    #search-results .cell {
+        flex: 1 1 33%;
+    }
+}
+
+@container (max-width: 349px) {
+    #filmsearch-form .cell {
+        flex: 1 1 100%;
+    }
+    #search-results .callout.warning{
+        padding: 25px;
+    }
+}
+@container (max-width: 249px) {
+    #search-results .cell {
+        flex: 1 1 100%;
+    }
+}
+
+.film-poster {
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_IMDB_NAME</name>
+    <author>Oleksandr Tsybulia</author>
+    <creationDate>2024-09-19</creationDate>
+    <copyright>(C) 2024 Oleksandr Tsybulia. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>1.1.0</version>
+    <description>MOD_IMDB_DESCRIPTION</description>
+    <namespace path="src">Joomla\Module\Imdb</namespace>
+    <files>
+        <folder module="mod_imdb">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <scriptfile>script.php</scriptfile>
+    <media destination="mod_imdb" folder="media">
+        <filename>joomla.asset.json</filename>
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+</extension>
